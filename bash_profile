@@ -12,7 +12,7 @@ export PATH=/usr/local/zinc-0.3.5.1/bin:$PATH
 export PATH=/usr/local/sbt-13.5/bin:$PATH
 
 # Scala
-export PATH=/usr/local/scala-2.10.0/bin:$PATH
+export PATH=/usr/local/scala-2.11.2/bin:$PATH
 
 # Play
 export PATH=/usr/local/play-2.2.1:$PATH
