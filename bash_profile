@@ -1,3 +1,5 @@
+export HOSTNAME=localhost
+
 # MacPorts Installer addition on 2012-03-06_at_13:21:12: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
@@ -12,7 +14,7 @@ export PATH=/usr/local/zinc-0.3.5.1/bin:$PATH
 export PATH=/usr/local/sbt-13.5/bin:$PATH
 
 # Scala
-export PATH=/usr/local/scala-2.11.2/bin:$PATH
+export PATH=/usr/local/scala-2.11.4/bin:$PATH
 
 # Play
 export PATH=/usr/local/play-2.2.1:$PATH
@@ -95,8 +97,11 @@ alias status=' git status '
 alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
 
-export SBT_OPTS='-Xmx512M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=1024M'
+export SBT_OPTS='-Xmx512M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=1024M -Dscala.color'
+
+export JAVA_OPTS='-Dscala.color'
 
 md () { mkdir -p "$@" && cd "$@"; }
 
+title() { echo -n -e "\033]0;$1\007"; }
 
