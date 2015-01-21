@@ -23,7 +23,7 @@ export PATH=/usr/local/play-2.2.1:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 
 # Typesafe activator
-export PATH=/usr/local/activator-1.2.1-minimal:$PATH
+export PATH=/usr/local/activator-1.2.10:$PATH
 
 # MongoDB
 export PATH=/usr/local/mongodb/bin:$PATH
