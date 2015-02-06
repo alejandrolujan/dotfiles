@@ -1,32 +1,10 @@
 export HOSTNAME=localhost
 
-# MacPorts Installer addition on 2012-03-06_at_13:21:12: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-# Java 7
-export PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk/Contents/Home/bin:$PATH
-
-# Zinc
-export PATH=/usr/local/zinc-0.3.5.1/bin:$PATH
-
-# SBT	
-export PATH=/usr/local/sbt-13.5/bin:$PATH
-
 # Scala
-export PATH=/usr/local/scala-2.11.4/bin:$PATH
-
-# Play
-export PATH=/usr/local/play-2.2.1:$PATH
-
-# Mysql
-export PATH=/usr/local/mysql/bin:$PATH
+export PATH=/usr/local/scala-2.11.5/bin:$PATH
 
 # Typesafe activator
-export PATH=/usr/local/activator-1.2.10:$PATH
-
-# MongoDB
-export PATH=/usr/local/mongodb/bin:$PATH
+export PATH=/usr/local/activator-1.2.12:$PATH
 
 # Maven
 MAVEN_OPTS="-Xmx1024M -XX:MaxPermSize=1024M -Xmx1g -XX:ReservedCodeCacheSize=1g"
@@ -36,6 +14,8 @@ export MAVEN_OPTS
 export PATH=~/scripts:$PATH
 
 export CLASSPATH=.
+
+# Other terminal niceties
 export BLOCKSIZE=K
 export PAGER='less'
 
@@ -56,11 +36,15 @@ alias h='history'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias r='random.sh'
-alias rsy='random-with-symbols.sh'
+alias r='random'
+alias rsy='random-with-symbols'
 
-
+# Git prompt support
+source ~/src/git/contrib/completion/git-prompt.sh
 PS1='\h:\w$(__git_ps1 " (%s)")\$ '
+
+# Git tab completion
+source ~/src/git/contrib/completion/git-completion.bash
 
 # History settings
 HISTIGNORE="ls:pwd:w:ps:jobs:bg:fg:clear:exit"
@@ -73,10 +57,6 @@ shopt -s histappend
 
 # Default file creation permissions are ALL for self and group, none for others
 umask 0077
-
-# Git tab completion
-GTC='/usr/local/git/contrib/completion/git-completion.bash'
-[ -r $GTC ] && . $GTC
 
 # Git aliases
 alias add=' git add '
@@ -101,7 +81,9 @@ export SBT_OPTS='-Xmx512M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=1
 
 export JAVA_OPTS='-Dscala.color'
 
+# Create a directory and cd into it - trivial and extremely useful
 md () { mkdir -p "$@" && cd "$@"; }
 
+# Change the title of your terminal - useful when you have a few tabs open
 title() { echo -n -e "\033]0;$1\007"; }
 
