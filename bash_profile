@@ -77,7 +77,7 @@ alias status=' git status '
 alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
 
-export SBT_OPTS='-Xmx512M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=1024M -Dscala.color'
+export SBT_OPTS='-Xmx512M -Xss1M -XX:+CMSClassUnloadingEnabled -Dscala.color'
 
 export JAVA_OPTS='-Dscala.color'
 
