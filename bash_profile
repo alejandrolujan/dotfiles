@@ -85,3 +85,6 @@ md () { mkdir -p "$@" && cd "$@"; }
 # Change the title of your terminal - useful when you have a few tabs open
 title() { echo -n -e "\033]0;$1\007"; }
 
+# Just for fun
+alias starwars="telnet towel.blinkenlights.nl"
+
