@@ -1,10 +1,7 @@
 export HOSTNAME=localhost
 
-# Scala
-export PATH=/usr/local/scala-2.11.5/bin:$PATH
-
 # Typesafe activator
-export PATH=/usr/local/activator-1.2.12:$PATH
+export PATH=/usr/local/activator-dist-1.3.5:$PATH
 
 # Maven
 MAVEN_OPTS="-Xmx1024M -XX:MaxPermSize=1024M -Xmx1g -XX:ReservedCodeCacheSize=1g"
