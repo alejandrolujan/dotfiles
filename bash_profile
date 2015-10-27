@@ -58,6 +58,7 @@ umask 0077
 # Git aliases
 alias add=' git add '
 alias amend=' git commit --amend '
+alias amendnoedit=' git commit --amend --no-edit'
 alias branch=' git branch '
 alias commit=' git commit '
 alias cout=' git checkout '
@@ -74,6 +75,9 @@ alias unstash=' git stash pop '
 alias status=' git status '
 alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
+
+# SBT aliases
+alias biobreak='sbt validate'
 
 export SBT_OPTS='-Xmx512M -Xss1M -XX:+CMSClassUnloadingEnabled -Dscala.color'
 
