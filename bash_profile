@@ -44,10 +44,11 @@ PS1='\h:\w$(__git_ps1 " (%s)")\$ '
 source ~/src/git/contrib/completion/git-completion.bash
 
 # History settings
-HISTIGNORE="ls:pwd:w:ps:jobs:bg:fg:clear:exit"
+HISTIGNORE="ls:pwd:w:ps:jobs:bg:fg:clear:exit:history"
 HISTCONTROL=ignoredups
 HISTFILESIZE=10000
 HISTSIZE=500
+HISTTIMEFORMAT="%d/%m/%y %T "
 
 # append to the history file, don't overwrite it
 shopt -s histappend
