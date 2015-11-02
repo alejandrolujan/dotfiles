@@ -82,7 +82,7 @@ alias biobreak='sbt validate'
 
 export SBT_OPTS='-XX:+CMSClassUnloadingEnabled -Dscala.color'
 
-export JAVA_OPTS='-Dscala.color -Xss1M -XX:MaxMetaspaceSize=1G -XX:MetaspaceSize=256M -Xmx1G -Xmx2G'
+export JAVA_OPTS='-Dscala.color -Xss1M -XX:MaxMetaspaceSize=1G -XX:MetaspaceSize=256M -XX:+CMSClassUnloadingEnabled -Xmx1G -Xmx2G'
 
 # Create a directory and cd into it - trivial and extremely useful
 md () { mkdir -p "$@" && cd "$@"; }
