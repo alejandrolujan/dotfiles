@@ -1,7 +1,7 @@
 export HOSTNAME=localhost
 
 # Typesafe activator
-export PATH=/usr/local/activator-dist-1.3.5:$PATH
+export PATH=~/tools/activator-dist-1.3.7:$PATH
 
 # Maven
 MAVEN_OPTS="-Xmx1024M -XX:MaxPermSize=1024M -Xmx1g -XX:ReservedCodeCacheSize=1g"
@@ -15,6 +15,9 @@ export CLASSPATH=.
 # Other terminal niceties
 export BLOCKSIZE=K
 export PAGER='less'
+
+# Run scalarc when launching the REPL
+alias scala='scala -i ~/.scalarc'
 
 # replacement netstat cmd to find ports used by apps on OS X
 alias netstat_osx="sudo lsof -i -P"
@@ -35,6 +38,11 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias r='random'
 alias rsy='random-with-symbols'
+alias mg='mogrify -monitor -format jpg *.NEF'
+alias nukenef='rm -f *.NEF'
+alias s='cd ~/src'
+alias t='cd ~/temp'
+alias removeallspaces='for f in *\ *; do mv "$f" "${f// /_}"; done'
 
 # Git prompt support
 source ~/src/git/contrib/completion/git-prompt.sh
@@ -54,7 +62,7 @@ HISTTIMEFORMAT="%d/%m/%y %T "
 shopt -s histappend
 
 # Default file creation permissions are ALL for self and group, none for others
-umask 0077
+# umask 0077
 
 # Git aliases
 alias add=' git add '
@@ -78,7 +86,7 @@ alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
 
 # SBT aliases
-alias biobreak='sbt validate'
+alias biobreak='sbt clean validate'
 
 export SBT_OPTS='-XX:+CMSClassUnloadingEnabled -Dscala.color'
 
@@ -89,6 +97,9 @@ md () { mkdir -p "$@" && cd "$@"; }
 
 # Change the title of your terminal - useful when you have a few tabs open
 title() { echo -n -e "\033]0;$1\007"; }
+
+# Open file with Deckset
+deckset() { open $1 -a Deckset; }
 
 # Just for fun
 alias starwars="telnet towel.blinkenlights.nl"
