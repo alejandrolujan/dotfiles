@@ -1,7 +1,7 @@
 export HOSTNAME=localhost
 
 # Typesafe activator
-export PATH=~/tools/activator-dist-1.3.7:$PATH
+export PATH=~/tools/activator-dist-1.3.10/bin:$PATH
 
 # Maven
 MAVEN_OPTS="-Xmx1024M -XX:MaxPermSize=1024M -Xmx1g -XX:ReservedCodeCacheSize=1g"
