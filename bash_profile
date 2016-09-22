@@ -3,6 +3,9 @@ export HOSTNAME=localhost
 # Typesafe activator
 export PATH=~/tools/activator-dist-1.3.10/bin:$PATH
 
+# Rust
+export PATH="~/.cargo/bin:$PATH"
+
 # Maven
 MAVEN_OPTS="-Xmx1024M -XX:MaxPermSize=1024M -Xmx1g -XX:ReservedCodeCacheSize=1g"
 export MAVEN_OPTS
@@ -43,6 +46,7 @@ alias nukenef='rm -f *.NEF'
 alias s='cd ~/src'
 alias t='cd ~/temp'
 alias removeallspaces='for f in *\ *; do mv "$f" "${f// /_}"; done'
+alias findAllMovs='find . -iname "*.mov"'
 
 # Git prompt support
 source ~/src/git/contrib/completion/git-prompt.sh
@@ -101,6 +105,20 @@ title() { echo -n -e "\033]0;$1\007"; }
 # Open file with Deckset
 deckset() { open $1 -a Deckset; }
 
+# Colorized man pages
+man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;36m") \
+        LESS_TERMCAP_md=$(printf "\e[1;36m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+            man "$@"
+}
+
 # Just for fun
 alias starwars="telnet towel.blinkenlights.nl"
+
 
