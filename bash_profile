@@ -38,7 +38,7 @@ alias nukenef='rm -f *.NEF'
 alias s='cd ~/src'
 alias t='cd ~/temp'
 alias removeallspaces='for f in *\ *; do mv "$f" "${f// /_}"; done'
-alias findAllMovs='find . -iname "*.mov"'
+alias findallmovs='find . -iname "*.mov"'
 
 # Git prompt support
 #source ~/src/git/contrib/completion/git-prompt.sh
