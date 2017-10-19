@@ -1,15 +1,5 @@
 export HOSTNAME=localhost
 
-# Typesafe activator
-export PATH=~/tools/activator-dist-1.3.10/bin:$PATH
-
-# Rust
-export PATH="~/.cargo/bin:$PATH"
-
-# Maven
-MAVEN_OPTS="-Xmx1024M -XX:MaxPermSize=1024M -Xmx1g -XX:ReservedCodeCacheSize=1g"
-export MAVEN_OPTS
-
 # My Scripts
 export PATH=~/scripts:$PATH
 
@@ -33,7 +23,6 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # Aliases for common tasks
-alias dir='\ls -AFG'
 alias cpl='clear; pwd; ls'
 alias h='history'
 alias ..='cd ..'
@@ -88,9 +77,6 @@ alias unstash=' git stash pop '
 alias status=' git status '
 alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
-
-# SBT aliases
-alias biobreak='sbt clean validate'
 
 export SBT_OPTS='-XX:+CMSClassUnloadingEnabled -Dscala.color'
 
