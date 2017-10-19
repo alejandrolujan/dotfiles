@@ -1,5 +1,8 @@
 export HOSTNAME=localhost
 
+# Customize my prompt 
+export PS1="\w $ "
+
 # My Scripts
 export PATH=~/scripts:$PATH
 
@@ -38,11 +41,11 @@ alias removeallspaces='for f in *\ *; do mv "$f" "${f// /_}"; done'
 alias findAllMovs='find . -iname "*.mov"'
 
 # Git prompt support
-source ~/src/git/contrib/completion/git-prompt.sh
-PS1='\h:\w$(__git_ps1 " (%s)")\$ '
+#source ~/src/git/contrib/completion/git-prompt.sh
+#PS1='\h:\w$(__git_ps1 " (%s)")\$ '
 
 # Git tab completion
-source ~/src/git/contrib/completion/git-completion.bash
+#source ~/src/git/contrib/completion/git-completion.bash
 
 # History settings
 HISTIGNORE="ls:pwd:w:ps:jobs:bg:fg:clear:exit:history"
