@@ -45,7 +45,9 @@ alias findAllMovs='find . -iname "*.mov"'
 #PS1='\h:\w$(__git_ps1 " (%s)")\$ '
 
 # Git tab completion
-#source ~/src/git/contrib/completion/git-completion.bash
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
 # History settings
 HISTIGNORE="ls:pwd:w:ps:jobs:bg:fg:clear:exit:history"
@@ -78,6 +80,7 @@ alias push=' git push '
 alias stash=' git stash '
 alias unstash=' git stash pop '
 alias status=' git status '
+alias st=' git status '
 alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
 
