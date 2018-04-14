@@ -13,7 +13,7 @@ export BLOCKSIZE=K
 export PAGER='less'
 
 # Run scalarc when launching the REPL
-alias scala='scala -i ~/.scalarc'
+alias scala='scala -Dscala.color=true -i ~/.scalarc'
 
 # replacement netstat cmd to find ports used by apps on OS X
 alias netstat_osx="sudo lsof -i -P"
@@ -38,7 +38,7 @@ alias nukenef='rm -f *.NEF'
 alias s='cd ~/src'
 alias t='cd ~/temp'
 alias removeallspaces='for f in *\ *; do mv "$f" "${f// /_}"; done'
-alias findallmovs='find . -iname "*.mov"'
+alias findallmovs='find . -iname "*.m*v"'
 
 # Git prompt support
 #source ~/src/git/contrib/completion/git-prompt.sh
@@ -84,7 +84,7 @@ alias st=' git status '
 alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
 
-export SBT_OPTS='-XX:+CMSClassUnloadingEnabled -Dscala.color'
+export SBT_OPTS='-XX:+CMSClassUnloadingEnabled -Dscala.color=true'
 
 export JAVA_OPTS='-Dscala.color -Xss1M -XX:MaxMetaspaceSize=1G -XX:MetaspaceSize=256M -XX:+CMSClassUnloadingEnabled -Xmx1G -Xmx2G'
 
