@@ -83,6 +83,7 @@ alias status=' git status '
 alias st=' git status '
 alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
+alias back='git checkout -'
 
 export SBT_OPTS='-XX:+CMSClassUnloadingEnabled -Dscala.color=true'
 
