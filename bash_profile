@@ -77,7 +77,6 @@ alias master=' git checkout master '
 alias pop=' git stash pop '
 alias pull=' git pull --rebase '
 alias push=' git push '
-alias pushit="git push --set-upstream origin `git branch | grep \* | cut -d ' ' -f2`"
 alias stash=' git stash '
 alias unstash=' git stash pop '
 alias status=' git status '
