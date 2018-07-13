@@ -85,6 +85,11 @@ alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
 alias back='git checkout -'
 
+# Push branch to origin
+pushit() {
+  git push --set-upstream origin `git branch | grep \* | cut -d ' ' -f2` 
+}
+
 export SBT_OPTS='-XX:+CMSClassUnloadingEnabled -Dscala.color=true'
 
 export JAVA_OPTS='-Dscala.color -Xss1M -XX:MaxMetaspaceSize=1G -XX:MetaspaceSize=256M -XX:+CMSClassUnloadingEnabled -Xmx1G -Xmx2G'
