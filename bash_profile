@@ -39,6 +39,8 @@ alias s='cd ~/src'
 alias t='cd ~/temp'
 alias removeallspaces='for f in *\ *; do mv "$f" "${f// /_}"; done'
 alias findallmovs='find . -iname "*.m*v"'
+alias d='cd ~/src/dotfiles'
+alias sun='cd ~/src/scala-up-north-src'
 
 # Git prompt support
 #source ~/src/git/contrib/completion/git-prompt.sh
