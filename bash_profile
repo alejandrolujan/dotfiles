@@ -86,6 +86,7 @@ alias st=' git status '
 alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
 alias back='git checkout -'
+alias nb='git checkout -b '
 
 # Push branch to origin
 pushit() {
