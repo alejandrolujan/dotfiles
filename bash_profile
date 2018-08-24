@@ -68,6 +68,7 @@ shopt -s histappend
 alias add=' git add '
 alias amend=' git commit --amend '
 alias amendnoedit=' git commit --amend --no-edit'
+alias gall='git add .; git commit --amend --no-edit'
 alias branch=' git branch '
 alias commit=' git commit '
 alias cout=' git checkout '
