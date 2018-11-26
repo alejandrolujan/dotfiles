@@ -89,6 +89,7 @@ alias summary=' git log --summary'
 alias glog=' git log --pretty=format:"%h - %an, %ad : %s" '
 alias back='git checkout -'
 alias nb='git checkout -b '
+alias gb='git for-each-ref --sort=committerdate refs/heads/ --format="%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))"'
 
 # Push branch to origin
 pushit() {
