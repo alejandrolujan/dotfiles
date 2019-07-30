@@ -92,7 +92,7 @@ alias stash=' git stash '
 alias status=' git status '
 alias summary=' git log --summary'
 alias unstash=' git stash pop '
-alias pullm='git pull origin master'
+alias pullm='git checkout master && git pull && git checkout -'
 alias pushf='git push --force-with-lease'
 
 # Push branch to origin
