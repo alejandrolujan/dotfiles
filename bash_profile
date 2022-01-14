@@ -1,11 +1,13 @@
 export HOSTNAME=localhost
 
-# Customize my prompt 
-export PS1="\w $ "
+# Customize my prompt TODO move from .zsh to here 
+export PS1="%~ $ "
 
 # My Scripts
 export PATH=~/scripts:$PATH
 
+# Java (if this fails do brew install openjdk)
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CLASSPATH=.
 
 # Other terminal niceties
@@ -60,7 +62,7 @@ HISTSIZE=500
 HISTTIMEFORMAT="%d/%m/%y %T "
 
 # append to the history file, don't overwrite it
-shopt -s histappend
+#shopt -s histappend
 
 # Default file creation permissions are ALL for self and group, none for others
 # umask 0077
