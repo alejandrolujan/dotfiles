@@ -14,9 +14,6 @@ export CLASSPATH=.
 export BLOCKSIZE=K
 export PAGER='less'
 
-# Run scalarc when launching the REPL
-alias scala='scala -Dscala.color=true -i ~/.scalarc'
-
 # replacement netstat cmd to find ports used by apps on OS X
 alias netstat_osx="sudo lsof -i -P"
 
@@ -42,18 +39,7 @@ alias t='cd ~/temp'
 alias removeallspaces='for f in *\ *; do mv "$f" "${f// /_}"; done'
 alias findallmovs='find . -iname "*.m*v"'
 alias d='cd ~/src/dotfiles'
-alias sun='cd ~/src/scala-up-north-src'
-alias sq='cd ~/src/scalaquest/playapp'
 alias loc='find . | xargs wc -l'
-
-# Git prompt support
-#source ~/src/git/contrib/completion/git-prompt.sh
-#PS1='\h:\w$(__git_ps1 " (%s)")\$ '
-
-# Git tab completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
 
 # History settings
 HISTIGNORE="ls:pwd:w:ps:jobs:bg:fg:clear:exit:history"
@@ -61,9 +47,6 @@ HISTCONTROL=ignoredups
 HISTFILESIZE=10000
 HISTSIZE=500
 HISTTIMEFORMAT="%d/%m/%y %T "
-
-# append to the history file, don't overwrite it
-#shopt -s histappend
 
 # Default file creation permissions are ALL for self and group, none for others
 # umask 0077
@@ -107,18 +90,11 @@ pushit() {
   git push --set-upstream origin `git branch | grep \* | cut -d ' ' -f2` 
 }
 
-export SBT_OPTS='-XX:+CMSClassUnloadingEnabled -Dscala.color=true'
-
-export JAVA_OPTS='-Dscala.color -Xss1M -XX:MaxMetaspaceSize=1G -XX:MetaspaceSize=256M -XX:+CMSClassUnloadingEnabled -Xmx1G -Xmx2G'
-
 # Create a directory and cd into it - trivial and extremely useful
 md () { mkdir -p "$@" && cd "$@"; }
 
 # Change the title of your terminal - useful when you have a few tabs open
 title() { echo -n -e "\033]0;$1\007"; }
-
-# Open file with Deckset
-deckset() { open $1 -a Deckset; }
 
 # Colorized man pages
 man() {
@@ -135,8 +111,3 @@ man() {
 
 # Just for fun
 alias starwars="telnet towel.blinkenlights.nl"
-
-# Reminder script settings
-export TIMER_LAUNCHBAR=true
-
-alias ready='say -v Paulina Listo!'
