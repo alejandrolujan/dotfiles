@@ -44,6 +44,7 @@ alias findallmovs='find . -iname "*.m*v"'
 alias d='cd ~/src/dotfiles'
 alias sun='cd ~/src/scala-up-north-src'
 alias sq='cd ~/src/scalaquest/playapp'
+alias loc='find . | xargs wc -l'
 
 # Git prompt support
 #source ~/src/git/contrib/completion/git-prompt.sh
