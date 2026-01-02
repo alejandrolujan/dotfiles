@@ -1,21 +1,5 @@
-export HOSTNAME=localhost
-
 # Customize my prompt TODO move from .zsh to here 
 export PS1="%~ $ "
-
-# My Scripts
-export PATH=~/scripts:$PATH
-
-# Java (if this fails do brew install openjdk)
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export CLASSPATH=.
-
-# Other terminal niceties
-export BLOCKSIZE=K
-export PAGER='less'
-
-# replacement netstat cmd to find ports used by apps on OS X
-alias netstat_osx="sudo lsof -i -P"
 
 # Aliases for tweaked default behavior
 alias ls='ls -AFGlh'
@@ -30,16 +14,8 @@ alias h='history'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias r='random'
-alias rsy='random-with-symbols'
-alias mg='mogrify -monitor -format jpg *.NEF'
-alias nukenef='rm -f *.NEF'
 alias s='cd ~/src'
 alias t='cd ~/temp'
-alias removeallspaces='for f in *\ *; do mv "$f" "${f// /_}"; done'
-alias findallmovs='find . -iname "*.m*v"'
-alias d='cd ~/src/dotfiles'
-alias loc='find . | xargs wc -l'
 
 # History settings
 HISTIGNORE="ls:pwd:w:ps:jobs:bg:fg:clear:exit:history"
@@ -47,9 +23,6 @@ HISTCONTROL=ignoredups
 HISTFILESIZE=10000
 HISTSIZE=500
 HISTTIMEFORMAT="%d/%m/%y %T "
-
-# Default file creation permissions are ALL for self and group, none for others
-# umask 0077
 
 # Git aliases
 alias add=' git add '
@@ -71,7 +44,6 @@ alias grc='git rebase --continue'
 alias gri='git rebase -i '
 alias list=' git stash list --summary'
 alias log=' git log '
-#alias master=' git checkout master '
 alias main='git checkout main '
 alias nb='git checkout -b '
 alias pop=' git stash pop '
@@ -95,19 +67,3 @@ md () { mkdir -p "$@" && cd "$@"; }
 
 # Change the title of your terminal - useful when you have a few tabs open
 title() { echo -n -e "\033]0;$1\007"; }
-
-# Colorized man pages
-man() {
-    env \
-        LESS_TERMCAP_mb=$(printf "\e[1;36m") \
-        LESS_TERMCAP_md=$(printf "\e[1;36m") \
-        LESS_TERMCAP_me=$(printf "\e[0m") \
-        LESS_TERMCAP_se=$(printf "\e[0m") \
-        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-        LESS_TERMCAP_ue=$(printf "\e[0m") \
-        LESS_TERMCAP_us=$(printf "\e[1;32m") \
-            man "$@"
-}
-
-# Just for fun
-alias starwars="telnet towel.blinkenlights.nl"
